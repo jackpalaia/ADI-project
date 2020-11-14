@@ -1,4 +1,7 @@
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -22,12 +25,26 @@ public class Main {
         bubbleSort(temp);
         long endTime = System.nanoTime();
         long totalTime = endTime - startTime;
+        List<String> lines = new ArrayList<>();
+        lines.add("Total time to sort list (nanoseconds): " + totalTime);
+        for (int i : temp) {
+            lines.add(Integer.toString(i));
+        }
+        Path output = Paths.get("BubbleSort.txt");
+        Files.write(output, lines);
         
         temp = new ArrayList<>(dataList);
         startTime = System.nanoTime();
-        bubbleSort(temp);
+        heapSort(temp);
         endTime = System.nanoTime();
         totalTime = endTime - startTime;
+        lines = new ArrayList<>();
+        lines.add("Total time to sort list (nanoseconds): " + totalTime);
+        for (int i : temp) {
+            lines.add(Integer.toString(i));
+        }
+        output = Paths.get("HeapSort.txt");
+        Files.write(output, lines);
     }
 
     /**
