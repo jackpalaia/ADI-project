@@ -1,5 +1,5 @@
 Heap sort time complexities - worst case: O(n log n), average case: O(n log n), best case: O(n log n)
-Total time to sort list (nanoseconds): 2189100
+Total time to sort list - milliseconds: 0, nanoseconds: 907500
 2
 15
 19
