@@ -4,6 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -81,6 +82,10 @@ public class Main {
     private static void heapSort(List<Integer> list) {
         if (list == null) {
             throw new IllegalArgumentException("Passed in list is null and cannot be sorted.");
+        }
+        PriorityQueue<Integer> pq = new PriorityQueue<>(list);
+        for (int i = 0; i < list.size(); i++) {
+            list.set(i, pq.poll());
         }
     }
 }
