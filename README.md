@@ -2,4 +2,4 @@
 Repo for ADI project
 
 # to-do
- - implement heapsort without priorityqueue
+ - break up main method into functions
