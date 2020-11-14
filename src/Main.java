@@ -29,6 +29,7 @@ public class Main {
         long endTime = System.nanoTime();
         long totalTime = endTime - startTime;
         List<String> lines = new ArrayList<>();
+        lines.add("Bubble sort time complexities - worst case: O(n^2), average case: O(n^2), best case: O(n)");
         lines.add("Total time to sort list (nanoseconds): " + totalTime);
         for (int i : temp) {
             lines.add(Integer.toString(i));
@@ -42,6 +43,7 @@ public class Main {
         endTime = System.nanoTime();
         totalTime = endTime - startTime;
         lines = new ArrayList<>();
+        lines.add("Heap sort time complexities - worst case: O(n log n), average case: O(n log n), best case: O(n log n)");
         lines.add("Total time to sort list (nanoseconds): " + totalTime);
         for (int i : temp) {
             lines.add(Integer.toString(i));
