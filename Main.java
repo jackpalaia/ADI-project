@@ -8,6 +8,26 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        File data = new File("data.txt");
+        Scanner scanner = new Scanner(data);
+
+        List<Integer> dataList = new ArrayList<>();
+        while (scanner.hasNext()) {
+            dataList.add(scanner.nextInt());
+        }
+        scanner.close();
+        
+        List<Integer> temp = new ArrayList<>(dataList);
+        long startTime = System.nanoTime();
+        bubbleSort(temp);
+        long endTime = System.nanoTime();
+        long totalTime = endTime - startTime;
+        
+        temp = new ArrayList<>(dataList);
+        startTime = System.nanoTime();
+        bubbleSort(temp);
+        endTime = System.nanoTime();
+        totalTime = endTime - startTime;
     }
 
     /**
