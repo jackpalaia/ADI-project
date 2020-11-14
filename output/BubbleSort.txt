@@ -1,4 +1,5 @@
-Total time to sort list (nanoseconds): 16137900
+Bubble sort time complexities - worst case: O(n^2), average case: O(n^2), best case: O(n)
+Total time to sort list (nanoseconds): 13942100
 2
 15
 19

@@ -43,7 +43,8 @@ public class Main {
         endTime = System.nanoTime();
         totalTime = endTime - startTime;
         lines = new ArrayList<>();
-        lines.add("Heap sort time complexities - worst case: O(n log n), average case: O(n log n), best case: O(n log n)");
+        lines.add(
+                "Heap sort time complexities - worst case: O(n log n), average case: O(n log n), best case: O(n log n)");
         lines.add("Total time to sort list (nanoseconds): " + totalTime);
         for (int i : temp) {
             lines.add(Integer.toString(i));
