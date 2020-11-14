@@ -1,3 +1,5 @@
+package src;
+
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        File data = new File("data.txt");
+        File data = new File("input/data.txt");
         Scanner scanner = new Scanner(data);
 
         List<Integer> dataList = new ArrayList<>();
@@ -20,7 +22,7 @@ public class Main {
             dataList.add(scanner.nextInt());
         }
         scanner.close();
-        
+
         List<Integer> temp = new ArrayList<>(dataList);
         long startTime = System.nanoTime();
         bubbleSort(temp);
@@ -31,9 +33,9 @@ public class Main {
         for (int i : temp) {
             lines.add(Integer.toString(i));
         }
-        Path output = Paths.get("BubbleSort.txt");
+        Path output = Paths.get("output/BubbleSort.txt");
         Files.write(output, lines);
-        
+
         temp = new ArrayList<>(dataList);
         startTime = System.nanoTime();
         heapSort(temp);
@@ -44,8 +46,9 @@ public class Main {
         for (int i : temp) {
             lines.add(Integer.toString(i));
         }
-        output = Paths.get("HeapSort.txt");
+        output = Paths.get("output/HeapSort.txt");
         Files.write(output, lines);
+
     }
 
     /**
