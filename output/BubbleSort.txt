@@ -1,5 +1,5 @@
 Bubble sort time complexities - worst case: O(n^2), average case: O(n^2), best case: O(n)
-Total time to sort list - milliseconds: 14, nanoseconds: 14088200
+Total time to sort list - milliseconds: 15, nanoseconds: 15184900
 2
 15
 19
